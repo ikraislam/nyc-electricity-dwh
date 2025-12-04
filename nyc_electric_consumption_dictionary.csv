@@ -1,0 +1,32 @@
+column_name,data_type,description,expected_values / examples
+:id,object,System-generated unique identifier for each record as stored on the NYC Open Data (Socrata) platform.,"1, 2, 3, …"
+:version,object,"Internal version number for the row on the NYC Open Data platform, used to track updates to individual records.","1, 2, 3, …"
+:created_at,object,Timestamp indicating when the record was first created in the NYC Open Data system.,3/1/18 10:23
+:updated_at,object,Timestamp indicating the most recent update to the record in the NYC Open Data system.,5/15/24 14:02
+development_name,object,Official name of the NYCHA housing development associated with the account.,"“BARUCH HOUSES”, “QUEENSBRIDGE N”"
+borough,object,NYC borough where the development is located.,"Bronx, Brooklyn, Manhattan, Queens, Staten Island"
+account_name,object,Name or label of the utility billing account as defined by the vendor or NYCHA.,“NYCHA ELEC ACCT 12345”
+location,object,Building number within the development; used with TDS and building number to uniquely identify each building.,"“001”, “012A”"
+meter_amr,object,"Indicator of the meter type: Automatic Meter Reading, interval meter, or non-AMR meter.","“AMR”, “Interval”, “None”"
+meter_scope,object,"Description of the buildings, areas, or spaces covered by the meter/account.","“BLDGS 1–3”, “GARAGE & COMMUNITY CTR”"
+tds,object,Tenant Data System (TDS) number; unique NYCHA development identifier used across datasets.,"123, 456, 789"
+edp,object,NYCHA Electronic Data Processing (EDP) number used to identify developments in legacy energy-management systems.,"101, 205, 312"
+rc_code,object,NYCHA budget responsibility code representing a specific development or cost center.,"“BX001”, “MN045”"
+funding_source,object,Funding source classification indicating how the facility is financed or categorized.,"“Federal”, “Mixed Finance”, “Non Development Facility”"
+amp,object,"Asset Management Project (AMP) number, a HUD asset-tracking identifier that may represent one or more developments.","“NY001000”, “NY005002”"
+vendor_name,object,Name of the utility vendor providing electricity service.,"“Con Edison”, “National Grid”"
+umis_bill_id,object,Internal Unique Metering or Utility Management Information System bill identifier used by NYCHA to track individual bills.,“UB1234567”
+revenue_month,object,Year and month of the bill; typically stored as the first day of the billing month for convenience.,2016-01-01 (represents Jan 2016)
+service_start_date,object,First date of the billing period covered by the bill.,1/5/16
+service_end_date,object,Last date of the billing period covered by the bill.,2/4/16
+days,object,Number of days included in the billing period between service start and end dates.,"28, 30, 31"
+meter_number,object,Utility meter identifier assigned by the vendor; uniquely identifies the physical meter.,"“12345678”, “E-9876543”"
+estimated,object,Flag indicating whether the bill is based on estimated usage (Y) or actual meter reads (N).,"‘Y’, ‘N’"
+current_charges,object,"Total dollar charges for the billing period, including energy and applicable fees.",1543.27
+rate_class,object,Rate class or tariff code applied to the account according to the vendor’s pricing schedule.,"“EL1”, “SC9”, “Large GS”"
+bill_analyzed,object,Indicator of whether NYCHA’s Utility Management system reviewed the bill for billing errors during the period.,"‘Y’, ‘N’"
+consumption_kwh,object,"Total electricity consumed during the billing period, measured in kilowatt-hours (kWh).",24567.321
+kwh_charges,object,Dollar charges associated specifically with kWh energy consumption (excluding demand and other non-energy charges where separated).,1023.45
+consumption_kw,object,"Peak or demand consumption during the billing period, measured in kilowatts (kW), typically used for demand billing.",150.25
+kw_charges,object,Dollar charges related to kW demand components of the bill.,345.67
+other_charges,object,"Total of all other miscellaneous charges (fees, adjustments, taxes, surcharges) not captured in kWh or kW charges.",87.9
