@@ -1,17 +1,18 @@
 import requests
 import pandas as pd
 
-API_URL = "https://data.cityofnewyork.us/resource/jr24-e7cr.json"
-
-params = {
-    "$limit": 500000
+url = "https://data.cityofnewyork.us/api/v3/views/jr24-e7cr/query.json"
+headers = {
+    "X-App-Token": "7H4KqAl04HBCpLEHGhQmwbyUo"
 }
 
-response = requests.get(API_URL, params=params)
+response = requests.get(url, headers=headers)
+response.raise_for_status()
 data = response.json()
 
 df = pd.DataFrame(data)
 
-df.to_csv("data_raw/electric_consumption_raw.csv", index=False)
+# Script to Download Raw Data File
+df.to_csv("nyc_electric_consumption.csv", index=False)
 
-print("Data downloaded and saved.")
+print("Files saved.")
