@@ -75,5 +75,3 @@ This dataset powers:
 •	The AWS Redshift Data Warehouse
 •	All visualizations
 
-
-<img width="468" height="616" alt="image" src="https://github.com/user-attachments/assets/4192d53f-486f-4db5-ad16-ed99fdf65d29" />
